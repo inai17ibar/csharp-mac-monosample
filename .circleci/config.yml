@@ -15,22 +15,16 @@ jobs:
           name: install mono
           command: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
       - run:
-          name: install mono
           command: echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
       - run:
-          name: install mono
           command: sudo apt-get update
       - run:
-          name: install mono
           command: sudo apt-get install -y mono-complete
       - run:
-          name: install mono
           command: sudo apt-get install -y referenceassemblies-pcl
       - run:
-          name: install mono
           command: sudo apt-get install -y ca-certificates-mono
-     - run:
-          name: install mono
+      - run:
           command: sudo apt-get install -y nunit-console
       - run:
           name: build
