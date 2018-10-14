@@ -13,15 +13,15 @@ jobs:
           command: date
       - run: 
           name: install mono
-          command: sudo apt install software-properties-common wget
+          command: apt install software-properties-common wget
       - run:
-          command: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+          command: apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
       - run:
           command: echo "deb http://download.mono-project.com/repo/debian stable-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
       - run:
-          command: sudo apt-get update
+          command: apt-get update
       - run:
-          command: sudo apt install mono-devel
+          command: apt install mono-devel
       - run:
           name: build
           command: mcs main.cs
